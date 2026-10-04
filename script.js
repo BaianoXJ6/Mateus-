@@ -14,15 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
         00:00 UTC-3 = 03:00 UTC
     */
 
-    const DATA_ANIVERSARIO = Date.UTC(
-        2026,
-        9,
-        5,
-        3,
-        0,
-        0
-    );
-
+const DATA_ANIVERSARIO = Date.UTC(
+    2026,
+    10, // novembro
+    5,  // dia 5
+    3,  // 03:00 UTC = 00:00 no horário UTC-3
+    0,
+    0
+);
 
 
     // ==========================================
