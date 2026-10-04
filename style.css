@@ -1,0 +1,1555 @@
+/* ==================================================
+   CONFIGURAÇÕES
+================================================== */
+
+:root {
+    --background: #0a0a09;
+    --surface: #111110;
+    --surface-light: #171716;
+
+    --text: #f1eee7;
+    --muted: #aaa69d;
+    --muted-dark: #716f69;
+
+    --line: #292825;
+
+    --accent: #ff6846;
+    --accent-dark: #d94a2d;
+
+    --max-width: 1120px;
+}
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    background: var(--background);
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+button,
+a {
+    font-family: inherit;
+}
+
+
+[hidden] {
+    display: none !important;
+}
+
+
+::selection {
+    background: var(--accent);
+    color: #111;
+}
+
+
+
+/* ==================================================
+   CONTAGEM REGRESSIVA
+================================================== */
+
+.waiting-screen {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 28px;
+}
+
+
+.waiting-container {
+    width: min(920px, 100%);
+}
+
+
+.eyebrow {
+    margin: 0 0 24px;
+
+    color: var(--accent);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.22em;
+
+    text-transform: uppercase;
+}
+
+
+.waiting-container h1 {
+    max-width: 800px;
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(4rem, 10vw, 8rem);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.06em;
+}
+
+
+.waiting-text {
+    max-width: 480px;
+
+    margin: 30px 0 55px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+.countdown {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+
+.time {
+    padding: 34px 28px;
+
+    border-right:
+        1px solid var(--line);
+}
+
+
+.time:first-child {
+    padding-left: 0;
+}
+
+
+.time:last-child {
+    border-right: 0;
+}
+
+
+.time span {
+    display: block;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(3rem, 7vw, 5.6rem);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    font-variant-numeric:
+        tabular-nums;
+}
+
+
+.time small {
+    display: block;
+
+    margin-top: 14px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+
+.locked-message {
+    margin-top: 28px;
+
+    color: var(--muted-dark);
+
+    font-size: 12px;
+
+    letter-spacing: 0.05em;
+}
+
+
+.locked-message span {
+    margin-right: 7px;
+}
+
+
+
+/* ==================================================
+   ABERTURA
+================================================== */
+
+.birthday-hero {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding:
+        90px
+        max(28px, 6vw);
+
+    border-bottom:
+        1px solid var(--line);
+}
+
+
+.hero-inner {
+    width: min(
+        var(--max-width),
+        100%
+    );
+
+    margin: 0 auto;
+}
+
+
+.birthday-hero h1 {
+    max-width: 950px;
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(
+        4rem,
+        10vw,
+        8.5rem
+    );
+
+    font-weight: 400;
+
+    line-height: 0.87;
+
+    letter-spacing: -0.065em;
+}
+
+
+.birthday-hero h1 em {
+    display: block;
+
+    color: var(--accent);
+
+    font-weight: 400;
+
+    font-style: italic;
+}
+
+
+.birthday-hero h1 span {
+    display: block;
+}
+
+
+.hero-description {
+    max-width: 520px;
+
+    margin: 42px 0;
+
+    color: var(--muted);
+
+    font-size: 17px;
+
+    line-height: 1.75;
+}
+
+
+.start-button {
+    display: inline-block;
+
+    padding: 12px 0;
+
+    border-bottom:
+        1px solid var(--text);
+
+    color: var(--text);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.start-button:hover {
+    color: var(--accent);
+
+    border-color:
+        var(--accent);
+}
+
+
+
+/* ==================================================
+   SEÇÕES
+================================================== */
+
+.section {
+    padding:
+        120px
+        max(28px, 6vw);
+
+    border-bottom:
+        1px solid var(--line);
+}
+
+
+.section-container {
+    width: min(
+        var(--max-width),
+        100%
+    );
+
+    margin: 0 auto;
+}
+
+
+.section-heading {
+    display: grid;
+
+    grid-template-columns:
+        70px 1fr;
+
+    gap: 10px;
+
+    margin-bottom: 70px;
+}
+
+
+.section-heading > span {
+    padding-top: 8px;
+
+    color: var(--accent);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+
+.section-heading h2 {
+    max-width: 760px;
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(
+        2.8rem,
+        6vw,
+        5rem
+    );
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: -0.05em;
+}
+
+
+
+/* ==================================================
+   MOMENTOS
+================================================== */
+
+.memory {
+    display: grid;
+
+    grid-template-columns:
+        70px minmax(0, 1fr);
+
+    gap: 10px;
+
+    padding: 52px 0;
+
+    border-top:
+        1px solid var(--line);
+}
+
+
+.memory:last-child {
+    padding-bottom: 0;
+}
+
+
+.memory-number {
+    padding-top: 3px;
+
+    color: #5f5c56;
+
+    font-size: 11px;
+
+    letter-spacing: 0.08em;
+}
+
+
+.memory-content {
+    width: 100%;
+
+    max-width: 1000px;
+}
+
+
+.memory-label {
+    margin: 0 0 13px;
+
+    color: var(--accent);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+.memory h3 {
+    max-width: 880px;
+
+    margin: 0 0 18px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(
+        2.4rem,
+        5vw,
+        4rem
+    );
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.04em;
+}
+
+
+.memory-content > p:not(.memory-label) {
+    max-width: 650px;
+
+    margin:
+        0
+        0
+        4px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+
+/* ==================================================
+   FOTO REAL
+================================================== */
+
+.memory-photo {
+    position: relative;
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin-top: 32px;
+
+    overflow: hidden;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 5px;
+}
+
+
+.memory-photo::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    box-shadow:
+        inset
+        0
+        0
+        0
+        1px
+        rgba(255, 255, 255, 0.02);
+}
+
+
+.memory-photo img {
+    width: 100%;
+
+    aspect-ratio: 3 / 2;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.5s
+        cubic-bezier(
+            0.2,
+            0.8,
+            0.2,
+            1
+        );
+}
+
+
+.memory-photo:hover img {
+    transform:
+        scale(1.012);
+}
+
+
+
+/* ==================================================
+   PLACEHOLDER CASO AINDA NÃO TENHA FOTO
+================================================== */
+
+.photo-placeholder {
+    min-height: 350px;
+
+    margin-top: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--line);
+
+    color:
+        #5d5a54;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 14px;
+
+    font-style: italic;
+}
+
+
+
+/* ==================================================
+   18 ANOS DE...
+================================================== */
+
+.facts {
+    border-top:
+        1px solid var(--line);
+}
+
+
+.facts article {
+    display: grid;
+
+    grid-template-columns:
+        70px 1fr;
+
+    gap: 10px;
+
+    align-items:
+        start;
+
+    padding:
+        38px 0;
+
+    border-bottom:
+        1px solid var(--line);
+}
+
+
+.facts article span {
+    padding-top: 5px;
+
+    color:
+        var(--accent);
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        0.08em;
+}
+
+
+.facts article p {
+    max-width:
+        780px;
+
+    margin:
+        0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            1.7rem,
+            4vw,
+            2.8rem
+        );
+
+    font-weight:
+        400;
+
+    line-height:
+        1.2;
+
+    letter-spacing:
+        -0.025em;
+}
+
+
+
+/* ==================================================
+   CARTA
+================================================== */
+
+.letter-section {
+    background:
+        #eeeae1;
+
+    color:
+        #11110f;
+}
+
+
+.letter {
+    width:
+        min(
+            840px,
+            100%
+        );
+
+    margin:
+        0 auto;
+}
+
+
+.letter-number {
+    color:
+        var(--accent-dark);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.08em;
+}
+
+
+.letter-small {
+    margin:
+        70px
+        0
+        18px;
+
+    color:
+        #706c64;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.17em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.letter h2 {
+    margin:
+        0
+        0
+        60px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            3rem,
+            7vw,
+            5.7rem
+        );
+
+    font-weight:
+        400;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -0.05em;
+}
+
+
+.letter-text {
+    max-width:
+        640px;
+
+    margin-left:
+        auto;
+}
+
+
+.letter-text p {
+    margin:
+        0
+        0
+        28px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        19px;
+
+    line-height:
+        1.8;
+}
+
+
+.signature {
+    padding-top:
+        20px;
+
+    color:
+        var(--accent-dark);
+
+    font-style:
+        italic;
+}
+
+
+
+/* ==================================================
+   SURPRESA FINAL
+================================================== */
+
+.final-section {
+    min-height:
+        80vh;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        110px 24px;
+
+    text-align:
+        center;
+}
+
+
+.final-section h2 {
+    max-width:
+        800px;
+
+    margin:
+        0
+        0
+        42px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            3rem,
+            8vw,
+            6rem
+        );
+
+    font-weight:
+        400;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -0.05em;
+}
+
+
+.surprise-button {
+    padding:
+        15px
+        26px;
+
+    border:
+        1px solid
+        var(--text);
+
+    background:
+        transparent;
+
+    color:
+        var(--text);
+
+    cursor:
+        pointer;
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.12em;
+
+    text-transform:
+        uppercase;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.surprise-button:hover {
+    background:
+        var(--text);
+
+    color:
+        #111;
+
+    transform:
+        translateY(-2px);
+}
+
+
+.surprise-box {
+    width:
+        min(
+            560px,
+            100%
+        );
+
+    margin-top:
+        48px;
+
+    padding:
+        48px 42px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid
+        var(--line);
+
+    animation:
+        surpriseAppear
+        0.45s
+        ease
+        both;
+}
+
+
+@keyframes surpriseAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+.surprise-emoji {
+    font-size:
+        42px;
+}
+
+
+.surprise-box h3 {
+    margin:
+        25px
+        0
+        16px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        32px;
+
+    font-weight:
+        400;
+
+    line-height:
+        1.1;
+}
+
+
+.surprise-box p {
+    margin:
+        0;
+
+    color:
+        var(--muted);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.75;
+}
+
+
+
+/* ==================================================
+   CONFETES
+================================================== */
+
+.confetti {
+    position:
+        fixed;
+
+    top:
+        -30px;
+
+    z-index:
+        9999;
+
+    width:
+        7px;
+
+    height:
+        13px;
+
+    pointer-events:
+        none;
+
+    animation:
+        confettiFall
+        linear
+        forwards;
+}
+
+
+@keyframes confettiFall {
+
+    to {
+
+        transform:
+
+            translateX(
+                var(--move)
+            )
+
+            translateY(
+                110vh
+            )
+
+            rotate(
+                var(--rotate)
+            );
+
+        opacity:
+            0;
+
+    }
+
+}
+
+
+
+/* ==================================================
+   RODAPÉ
+================================================== */
+
+footer {
+    padding:
+        42px
+        24px;
+
+    border-top:
+        1px solid
+        var(--line);
+
+    color:
+        #5f5c56;
+
+    text-align:
+        center;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.17em;
+}
+
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .section-heading,
+    .memory,
+    .facts article {
+        grid-template-columns:
+            55px 1fr;
+    }
+
+
+    .birthday-hero {
+        padding-left:
+            32px;
+
+        padding-right:
+            32px;
+    }
+
+
+    .section {
+        padding-left:
+            32px;
+
+        padding-right:
+            32px;
+    }
+
+}
+
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 700px) {
+
+    .waiting-screen {
+        align-items:
+            center;
+
+        padding:
+            40px 20px;
+    }
+
+
+    .waiting-container h1 {
+        font-size:
+            clamp(
+                3.7rem,
+                18vw,
+                6rem
+            );
+
+        line-height:
+            0.92;
+    }
+
+
+    .waiting-text {
+        margin:
+            26px
+            0
+            42px;
+
+        font-size:
+            15px;
+    }
+
+
+    .countdown {
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+
+
+    .time {
+        padding:
+            25px 15px;
+
+        border-bottom:
+            1px solid
+            var(--line);
+    }
+
+
+    .time:first-child {
+        padding-left:
+            15px;
+    }
+
+
+    .time:nth-child(2) {
+        border-right:
+            0;
+    }
+
+
+    .time:nth-child(3),
+    .time:nth-child(4) {
+        border-bottom:
+            0;
+    }
+
+
+    .time:nth-child(4) {
+        border-right:
+            0;
+    }
+
+
+    .time span {
+        font-size:
+            clamp(
+                3rem,
+                17vw,
+                5rem
+            );
+    }
+
+
+    .birthday-hero {
+        min-height:
+            100svh;
+
+        padding:
+            60px
+            20px;
+    }
+
+
+    .birthday-hero h1 {
+        font-size:
+            clamp(
+                3.4rem,
+                17vw,
+                6rem
+            );
+
+        line-height:
+            0.9;
+    }
+
+
+    .hero-description {
+        margin:
+            34px
+            0;
+
+        font-size:
+            15px;
+    }
+
+
+    .section {
+        padding:
+            82px
+            20px;
+    }
+
+
+    .section-heading {
+        display:
+            block;
+
+        margin-bottom:
+            48px;
+    }
+
+
+    .section-heading > span {
+        display:
+            block;
+
+        margin-bottom:
+            16px;
+    }
+
+
+    .section-heading h2 {
+        font-size:
+            clamp(
+                2.7rem,
+                13vw,
+                4.2rem
+            );
+    }
+
+
+    .memory {
+        display:
+            block;
+
+        padding:
+            36px
+            0;
+    }
+
+
+    .memory-number {
+        margin-bottom:
+            20px;
+    }
+
+
+    .memory h3 {
+        font-size:
+            clamp(
+                2.2rem,
+                11vw,
+                3.3rem
+            );
+    }
+
+
+    .memory-content > p:not(.memory-label) {
+        font-size:
+            15px;
+
+        line-height:
+            1.7;
+    }
+
+
+    /*
+       FOTO NO CELULAR
+
+       Em vez de deixar uma foto enorme,
+       usamos 4:3 para ela ficar mais confortável.
+    */
+
+    .memory-photo {
+        margin-top:
+            25px;
+
+        border-radius:
+            4px;
+    }
+
+
+    .memory-photo img {
+        aspect-ratio:
+            4 / 3;
+
+        object-position:
+            center;
+    }
+
+
+    .photo-placeholder {
+        min-height:
+            240px;
+
+        margin-top:
+            25px;
+    }
+
+
+    .facts article {
+        display:
+            block;
+
+        padding:
+            30px
+            0;
+    }
+
+
+    .facts article span {
+        display:
+            block;
+
+        margin-bottom:
+            18px;
+    }
+
+
+    .facts article p {
+        font-size:
+            clamp(
+                1.7rem,
+                8vw,
+                2.4rem
+            );
+    }
+
+
+    .letter-section {
+        padding-top:
+            85px;
+
+        padding-bottom:
+            85px;
+    }
+
+
+    .letter-small {
+        margin-top:
+            48px;
+    }
+
+
+    .letter h2 {
+        margin-bottom:
+            45px;
+
+        font-size:
+            clamp(
+                3rem,
+                14vw,
+                4.5rem
+            );
+    }
+
+
+    .letter-text {
+        margin-left:
+            0;
+    }
+
+
+    .letter-text p {
+        font-size:
+            17px;
+
+        line-height:
+            1.75;
+    }
+
+
+    .final-section {
+        min-height:
+            70svh;
+
+        padding:
+            85px
+            20px;
+    }
+
+
+    .surprise-box {
+        margin-top:
+            40px;
+
+        padding:
+            36px
+            24px;
+    }
+
+
+    .surprise-box h3 {
+        font-size:
+            27px;
+    }
+
+}
+
+
+
+/* ==================================================
+   CELULARES PEQUENOS
+================================================== */
+
+@media (max-width: 430px) {
+
+    .waiting-screen {
+        padding:
+            30px 16px;
+    }
+
+
+    .waiting-container h1 {
+        font-size:
+            3.8rem;
+    }
+
+
+    .time {
+        padding:
+            22px 10px;
+    }
+
+
+    .time span {
+        font-size:
+            3.3rem;
+    }
+
+
+    .birthday-hero {
+        padding:
+            50px
+            17px;
+    }
+
+
+    .birthday-hero h1 {
+        font-size:
+            3.7rem;
+    }
+
+
+    .section {
+        padding:
+            70px
+            17px;
+    }
+
+
+    .memory h3 {
+        font-size:
+            2.45rem;
+    }
+
+
+    .memory-photo img {
+        aspect-ratio:
+            4 / 3;
+    }
+
+
+    .letter-text p {
+        font-size:
+            16px;
+    }
+
+
+    .surprise-button {
+        width:
+            100%;
+    }
+
+}
