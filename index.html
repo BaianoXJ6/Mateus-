@@ -1,1042 +1,154 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 
-
-
 <head>
-
     <meta charset="UTF-8">
 
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
+    <meta
+        name="theme-color"
+        content="#0a0a09"
+    >
 
     <title>Mateus.</title>
 
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
-
-    <link rel="stylesheet" href="style.css">
-
+    <script
+        src="script.js"
+        defer
+    ></script>
 </head>
-
 
 
 <body>
 
+    <!-- =========================================
+         TELA DE ESPERA
+    ========================================== -->
 
-
-
-
-    <!-- =========================
-
-       CONTAGEM REGRESSIVA
-
-  ========================== -->
-
-
-
-    <main class="waiting-screen" id="waitingScreen">
-
-
+    <main
+        class="waiting-screen"
+        id="waitingScreen"
+    >
 
         <div class="waiting-container">
 
-
-
             <p class="eyebrow">
-
                 05 • 10 • 2026
-
             </p>
-
-
-
 
 
             <h1>
-
                 Falta pouco.
-
             </h1>
 
 
-
-
-
             <p class="waiting-text">
-
                 Tem uma coisa esperando por você
-
                 quando der meia-noite.
-
             </p>
 
 
+            <!-- CONTAGEM -->
 
-
-
-            <div class="countdown" id="countdown">
-
-
+            <div
+                class="countdown"
+                id="countdown"
+            >
 
                 <div class="time">
-
-
 
                     <span id="days">
-
                         00
-
                     </span>
 
-
-
                     <small>
-
                         dias
-
                     </small>
-
-
 
                 </div>
 
 
-
-
-
                 <div class="time">
-
-
 
                     <span id="hours">
-
                         00
-
                     </span>
 
-
-
                     <small>
-
                         horas
-
                     </small>
-
-
 
                 </div>
 
 
-
-
-
                 <div class="time">
-
-
 
                     <span id="minutes">
-
                         00
-
                     </span>
 
-
-
                     <small>
-
                         minutos
-
                     </small>
 
-
-
                 </div>
-
-
-
 
 
                 <div class="time">
 
-
-
                     <span id="seconds">
-
                         00
-
                     </span>
 
-
-
                     <small>
-
                         segundos
-
                     </small>
-
-
 
                 </div>
 
-
-
             </div>
-
-
-
 
 
             <div class="locked-message">
 
-
-
                 <span>
-
                     🔒
-
                 </span>
-
-
 
                 abre à meia-noite
 
-
-
             </div>
 
-
-
         </div>
-
-
 
     </main>
 
 
 
-
-
-
-
-    <!-- ==================================
-
-       SÓ APARECE DEPOIS DA MEIA-NOITE
-
-  =================================== -->
-
-
-
-    <div id="birthdayContent" hidden>
-
-
-
-
-
-        <!-- ABERTURA -->
-
-
-
-        <header class="birthday-hero">
-
-
-
-            <div class="hero-inner">
-
-
-
-                <p class="eyebrow">
-
-                    finalmente chegou
-
-                </p>
-
-
-
-
-
-                <h1>
-
-
-
-                    Feliz
-
-
-
-                    <em>
-
-                        18 anos,
-
-                    </em>
-
-
-
-                    <span data-name>
-
-                        Mateus
-
-                    </span>.
-
-
-
-                </h1>
-
-
-
-
-
-                <p class="hero-description">
-
-
-
-                    Hoje começa uma fase nova.
-
-
-
-                    Fiz isso aqui para guardar algumas
-
-                    coisas que eu queria te dizer nesse dia.
-
-
-
-                </p>
-
-
-
-
-
-                <a href="#momentos" class="start-button">
-
-                    continuar ↓
-
-                </a>
-
-
-
-            </div>
-
-
-
-        </header>
-
-
-
-
-
-
-
-        <!-- MOMENTOS -->
-
-
-
-        <section class="section" id="momentos">
-
-
-
-            <div class="section-container">
-
-
-
-
-
-                <div class="section-heading">
-
-
-
-                    <span>
-
-                        01
-
-                    </span>
-
-
-
-                    <h2>
-
-                        Algumas lembranças.
-
-                    </h2>
-
-
-
-                </div>
-
-
-
-
-
-
-
-                <article class="memory">
-
-
-
-                    <div class="memory-number">
-
-                        01
-
-                    </div>
-
-
-
-                    <div class="memory-content">
-
-
-
-                        <p class="memory-label">
-
-                            O começo
-
-                        </p>
-
-
-
-                        <h3>
-
-                            Quando tudo começou
-
-                        </h3>
-
-
-
-                        <p>
-
-                            Infelizmente não tenho nenhuma foto quando a gente se conheceu, mas eu agradeço irmão de
-
-                            coração por ter conhecido você como o "Justin Bieber". Aquele dia que a gente se conheceu
-
-                            foi o começo de uma amizade que eu espero que dure pra sempre.
-
-                        </p>
-
-
-
-                    </div>
-
-
-
-                </article>
-
-
-
-
-
-
-
-                <article class="memory">
-
-
-
-                    <div class="memory-number">
-
-                        02
-
-                    </div>
-
-
-
-
-
-                    <div class="memory-content">
-
-
-
-                        <p class="memory-label">
-
-                            Uma história
-
-                        </p>
-
-
-
-
-
-                        <h3>
-
-                            Aquele dia que não dá pra esquecer
-
-                        </h3>
-
-
-
-
-
-                        <p>
-
-
-
-                            Não foi os primeiros trabalhos que a gente fez juntos, mas esse a gente deu 100% de si e o
-
-                            resultado foi incrível. Aquele dia foi muito especial e eu espero que a gente tenha muitos
-
-                            outros assim.
-
-                        </p>
-
-
-
-
-
-                        <div class="memory-photo">
-
-                            <img src="fotos/foto1.jpg" alt="Uma lembrança nossa">
-
-                        </div>
-
-
-
-                    </div>
-
-
-
-                </article>
-
-
-
-
-
-
-
-                <article class="memory">
-
-
-
-                    <div class="memory-number">
-
-                        03
-
-                    </div>
-
-
-
-
-
-                    <div class="memory-content">
-
-
-
-                        <p class="memory-label">
-
-                            Hoje
-
-                        </p>
-
-
-
-
-
-                        <h3>
-
-                            E agora, 18.
-
-                        </h3>
-
-
-
-
-
-                        <p>
-
-
-
-                            Parabéns "autista" kkkk, brincadeiras a parte. parabéns pelo seu jeito irmão, parabéns por
-
-                            ser essa pessoa incrível que você é. Que você continue sendo essa pessoa que rende
-
-                            histórias, risadas e momentos que ficam guardados.
-
-
-
-
-
-                        </p>
-
-
-
-
-
-                        <div class="memory-photo">
-
-                            <img src="fotos/foto2.jpg" alt="Foto especial">
-
-                    </div>
-
-
-
-            </div>
-
-
-
-            </article>
-
-
-
-
-
-    </div>
-
-
-
-    </section>
-
-
-
-
-
-
-
-    <!-- 18 ANOS DE -->
-
-
-
-    <section class="section facts-section">
-
-
-
-        <div class="section-container">
-
-
-
-
-
-            <div class="section-heading">
-
-
-
-                <span>
-
-                    02
-
-                </span>
-
-
-
-                <h2>
-
-                    18 anos de...
-
-                </h2>
-
-
-
-            </div>
-
-
-
-
-
-            <div class="facts">
-
-
-
-
-
-                <article>
-
-
-
-                    <span>
-
-                        01
-
-                    </span>
-
-
-
-                    <p>
-
-
-
-                        Ficar zuando de si mesmo sobre a ex.
-
-                        "Matuto..."
-
-
-
-                    </p>
-
-
-
-                </article>
-
-
-
-
-
-                <article>
-
-
-
-                    <span>
-
-                        02
-
-                    </span>
-
-
-
-                    <p>
-
-
-
-                        Seu jeito de brincar, de rir, de falar e de se e expressar. É impossível não rir com você
-
-
-
-                    </p>
-
-
-
-                </article>
-
-
-
-
-
-                <article>
-
-
-
-                    <span>
-
-                        03
-
-                    </span>
-
-
-
-                    <p>
-
-
-
-                        fazer qualquer conversa simples
-
-                        virar uma resenha.
-
-
-
-                    </p>
-
-
-
-                </article>
-
-
-
-
-
-            </div>
-
-
-
-        </div>
-
-
-
-    </section>
-
-
-
-
-
-
-
-    <!-- CARTA -->
-
-
-
-    <section class="section letter-section">
-
-
-
-        <div class="letter">
-
-
-
-
-
-            <span class="letter-number">
-
-                03
-
-            </span>
-
-
-
-
-
-        <p class="letter-small">
-
-    uma coisa que eu queria te dizer
-
-</p>
-
-
-
-<h2>
-
-    Para
-
-    <span data-name>
-
-        Mateus
-
-    </span>.
-
-</h2>
-
-
-
-<div class="letter-text">
-
-
-
-    <p>
-
-        Mateus, chegar aos 18 é uma fase importante pra caramba,
-
-        e eu não podia deixar esse dia passar sem te lembrar
-
-        o quanto eu valorizo a nossa amizade.
-
-    </p>
-
-
-
-    <p>
-
-        Já são mais ou menos cinco anos de amizade,
-
-        e nesse tempo eu fui conhecendo cada vez mais
-
-        o cara que você é. Você é muito brincalhão:
-
-        sabe a hora de brincar, de fazer todo mundo rir,
-
-        mas também sabe a hora de parar e ter uma conversa séria.
-
-    </p>
-
-
-
-    <p>
-
-        Uma das coisas que eu mais admiro em você
-
-        é a forma como você sabe conversar e se expressar.
-
-        Você sabe ouvir, sabe dialogar e sabe falar
-
-        o que pensa sem deixar de respeitar quem está do outro lado.
-
-        Isso é uma qualidade que vale muito.
-
-    </p>
-
-
-
-    <p>
-
-        Eu sou muito grato pela amizade que a gente construiu
-
-        durante todos esses anos. Por todas as conversas,
-
-        pelas resenhas, pelas besteiras, pelos momentos sérios
-
-        e por tudo que a gente já viveu até aqui.
-
-    </p>
-
-
-
-    <p>
-
-        Espero de verdade que isso seja só o começo.
-
-        Que a nossa amizade dure por muitos e muitos anos,
-
-        que a gente continue crescendo junto,
-
-        acompanhando as conquistas um do outro
-
-        e construindo um futuro brilhante.
-
-    </p>
-
-
-
-    <p>
-
-        E quando a gente olhar pra trás daqui a alguns anos,
-
-        espero que a gente ainda esteja lado a lado,
-
-        lembrando de tudo isso e vendo o quanto a gente evoluiu.
-
-    </p>
-
-
-
-    <p class="signature">
-
-        Feliz 18 anos, irmão. ❤️
-
-    </p>
-
-
-
-</div>
-
-
-
-
-
-
-
-            </div>
-
-    </section>
-
-
-    <!-- SURPRESA -->
-
-
-
-    <section class="final-section">
-
-
-
-        <p class="eyebrow">
-
-            ainda não acabou
-
-        </p>
-
-
-
-
-
-        <h2>
-
-            Mais uma coisa.
-
-        </h2>
-
-
-
-
-
-        <button id="surpriseBtn" class="surprise-button" type="button">
-
-
-
-            abrir surpresa
-
-
-
-        </button>
-
-
-
-
-
-        <div id="surpriseBox" class="surprise-box" hidden>
-
-
-
-            <div class="surprise-emoji">
-
-                🎂
-
-            </div>
-
-
-
-
-
-            <h3>
-
-
-
-                Feliz aniversário,
-
-
-
-                <span data-name>
-
-                    Mateus
-
-                </span>.
-
-
-
-            </h3>
-
-
-
-
-
-            <p>
-
-
-
-                Os 18 chegaram.
-
-
-
-                Parabéns irmão por essa data, que você aproveite muito!
-
-                Cuida matuto, responde a nega.
-
-
-
-            </p>
-
-
-
-        </div>
-
-
-
-    </section>
-
-
-
-
-
-
-
-    <footer>
-
-
-
-        05.10.2026
-
-
-
-    </footer>
-
-
-
-
-
-    </div>
-
-
-
-
-
-
-
-    <script src="script.js"></script>
-
+    <!-- =========================================
+         CONTEÚDO DO ANIVERSÁRIO
+
+         FICA VAZIO ANTES DA MEIA-NOITE.
+
+         O JAVASCRIPT VAI RECEBER O CONTEÚDO
+         DA VERCEL DEPOIS DAS 00:00.
+    ========================================== -->
+
+    <div
+        id="birthdayContent"
+        hidden
+    ></div>
 
 
 </body>
-
-
 
 </html>
