@@ -859,7 +859,7 @@ a {
 
     margin:
         0
-        0
+        auto
         42px;
 
     font-family:
@@ -941,8 +941,10 @@ a {
             100%
         );
 
-    margin-top:
-        48px;
+    margin:
+        48px
+        auto
+        0;
 
     padding:
         48px 42px;
