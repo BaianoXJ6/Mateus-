@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0a0a09"
+    >
+
+    <title>Mateus.</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <script
+        src="script.js"
+        defer
+    ></script>
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         TELA DE ESPERA
+    ========================================== -->
+
+    <main
+        class="waiting-screen"
+        id="waitingScreen"
+    >
+
+        <div class="waiting-container">
+
+            <p class="eyebrow">
+                05 • 11 • 2026
+            </p>
+
+
+            <h1>
+                Falta pouco.
+            </h1>
+
+
+            <p class="waiting-text">
+                Tem uma coisa esperando por você
+                quando der meia-noite.
+            </p>
+
+
+            <!-- CONTAGEM -->
+
+            <div
+                class="countdown"
+                id="countdown"
+            >
+
+                <div class="time">
+
+                    <span id="days">
+                        00
+                    </span>
+
+                    <small>
+                        dias
+                    </small>
+
+                </div>
+
+
+                <div class="time">
+
+                    <span id="hours">
+                        00
+                    </span>
+
+                    <small>
+                        horas
+                    </small>
+
+                </div>
+
+
+                <div class="time">
+
+                    <span id="minutes">
+                        00
+                    </span>
+
+                    <small>
+                        minutos
+                    </small>
+
+                </div>
+
+
+                <div class="time">
+
+                    <span id="seconds">
+                        00
+                    </span>
+
+                    <small>
+                        segundos
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="locked-message">
+
+                <span>
+                    🔒
+                </span>
+
+                abre à meia-noite
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================
+         CONTEÚDO DO ANIVERSÁRIO
+
+         FICA VAZIO ANTES DA MEIA-NOITE.
+
+         O JAVASCRIPT VAI RECEBER O CONTEÚDO
+         DA VERCEL DEPOIS DAS 00:00.
+    ========================================== -->
+
+    <div
+        id="birthdayContent"
+        hidden
+    ></div>
+
+
+</body>
+
+</html>
