@@ -8,11 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /*
-<<<<<<< HEAD
         05/11/2026 às 00:00
-=======
-        05/10/2026 às 00:00
->>>>>>> 274d61ed2086cafd9a56445041c488a7cd8423d8
         horário de Brasília / Pernambuco (-03:00)
 
         00:00 UTC-3 = 03:00 UTC
@@ -597,25 +593,9 @@ const DATA_ANIVERSARIO = Date.UTC(
     // INICIAR
     // ==========================================
 
-<<<<<<< HEAD
     // A página é uma homenagem pronta para ser mostrada: carregar agora,
     // sem depender do relógio ou da contagem regressiva.
     liberarSite();
-=======
-    atualizarContagem();
-
-
-    /*
-        250ms faz a mudança acontecer
-        praticamente no instante
-        em que bater meia-noite.
-    */
-
-    setInterval(
-        atualizarContagem,
-        250
-    );
->>>>>>> 274d61ed2086cafd9a56445041c488a7cd8423d8
 
 
 
@@ -624,17 +604,6 @@ const DATA_ANIVERSARIO = Date.UTC(
     );
 
 
-<<<<<<< HEAD
     console.log("Homenagem liberada.");
 
 });
-=======
-    console.log(
-        "Data de liberação:",
-        new Date(
-            DATA_ANIVERSARIO
-        )
-    );
-
-});
->>>>>>> 274d61ed2086cafd9a56445041c488a7cd8423d8
